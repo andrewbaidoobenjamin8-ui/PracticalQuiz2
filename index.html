@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modern Kitchen - Final Luxury Room</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene shadow="type: pcfsoft">
+      
+      <!-- LIGHTING -->
+      <a-light type="ambient" color="#fff" intensity="0.7"></a-light>
+      <a-light type="directional" position="-1 4 2" intensity="0.5" castShadow="true"></a-light>
+
+      <!-- ENVIRONMENT -->
+      <a-sky color="#BDB7AB"></a-sky>
+      <!-- Glossy Floor -->
+      <a-plane rotation="-90 0 0" width="20" height="20" color="#A39A8E" roughness="0.2" metalness="0.3"></a-plane>
+      <!-- Ceiling -->
+      <a-plane position="0 5 0" rotation="90 0 0" width="10" height="10" color="#C7BCAC"></a-plane>
+
+      <!-- WALLS -->
+      <a-box position="0 2.5 -4" width="10" height="5" depth="0.1" color="#C7BCAC"></a-box> <!-- Back Wall -->
+      <a-box position="-5 2.5 0" rotation="0 90 0" width="10" height="5" depth="0.1" color="#C7BCAC"></a-box> <!-- Left Wall -->
+      <a-box position="5 2.5 0" rotation="0 90 0" width="10" height="5" depth="0.1" color="#C7BCAC"></a-box> <!-- Right Wall -->
+      
+      <!-- NEW: BIG GREEN FLOWER / PLANT (Left Corner) -->
+      <a-entity position="-4.2 0 -3.3">
+        <!-- Pot -->
+        <a-cylinder radius="0.3" height="0.6" color="#4E342E"></a-cylinder>
+        <!-- Main Stem -->
+        <a-cylinder position="0 0.8 0" radius="0.03" height="1" color="#2E7D32"></a-cylinder>
+        <!-- Large Leaves (Using scaled spheres for a lush look) -->
+        <a-sphere position="0 1.2 0" radius="0.4" scale="1 0.2 1.5" rotation="20 0 0" color="#2E7D32"></a-sphere>
+        <a-sphere position="0.3 1.5 0.2" radius="0.4" scale="1 0.2 1.5" rotation="30 45 0" color="#388E3C"></a-sphere>
+        <a-sphere position="-0.3 1.4 -0.2" radius="0.4" scale="1 0.2 1.5" rotation="10 -45 0" color="#1B5E20"></a-sphere>
+        <a-sphere position="0.2 1.7 -0.3" radius="0.35" scale="1 0.2 1.5" rotation="40 120 0" color="#43A047"></a-sphere>
+        <a-sphere position="-0.1 1.9 0.1" radius="0.3" scale="1 0.2 1.5" rotation="10 200 0" color="#2E7D32"></a-sphere>
+      </a-entity>
+
+      <!-- TV (On Left Wall) -->
+      <a-entity position="-4.9 2.5 0" rotation="0 90 0">
+        <a-box width="3.2" height="1.8" depth="0.1" color="#111"></a-box>
+        <a-plane width="3.0" height="1.6" position="0 0 0.06" color="#222"></a-plane>
+      </a-entity>
+
+      <!-- REFRIGERATOR (Right side) -->
+      <a-entity position="3.8 1.1 -3.5">
+        <a-box width="1.8" height="2.2" depth="0.8" color="#A9A9A9" metalness="0.5"></a-box>
+        <a-box position="-0.46 0 0.41" width="0.88" height="2.18" depth="0.05" color="#C0C0C0" metalness="0.6"></a-box>
+        <a-box position="0.46 0 0.41" width="0.88" height="2.18" depth="0.05" color="#C0C0C0" metalness="0.6"></a-box>
+        <a-cylinder position="-0.1 0 0.48" radius="0.02" height="1.2" color="#1A1A1A"></a-cylinder>
+        <a-cylinder position="0.1 0 0.48" radius="0.02" height="1.2" color="#1A1A1A"></a-cylinder>
+      </a-entity>
+
+      <!-- Left Tall Cabinet -->
+      <a-box position="-3.5 2.2 -3.8" width="2.5" height="4.4" depth="0.4" color="#D2C5B4"></a-box> 
+      
+      <!-- LUXURY GOLD WALL CLOCK -->
+      <a-entity position="-1.5 3.2 -3.93">
+        <a-cylinder rotation="90 0 0" radius="0.42" height="0.05" color="#D4AF37" metalness="0.8"></a-cylinder>
+        <a-cylinder rotation="90 0 0" radius="0.38" height="0.06" color="#FFFFFF"></a-cylinder>
+        <a-text value="12" position="0 0.28 0.04" align="center" width="1.5" color="#B8860B"></a-text>
+        <a-text value="3" position="0.28 0 0.04" align="center" width="1.5" color="#B8860B"></a-text>
+        <a-text value="6" position="0 -0.28 0.04" align="center" width="1.5" color="#B8860B"></a-text>
+        <a-text value="9" position="-0.28 0 0.04" align="center" width="1.5" color="#B8860B"></a-text>
+        <a-box position="0.1 0 0.04" width="0.22" height="0.02" depth="0.01" color="#D4AF37"></a-box>
+        <a-box position="0 0.15 0.04" width="0.02" height="0.32" depth="0.01" color="#D4AF37"></a-box>
+      </a-entity>
+
+      <!-- KITCHEN COUNTER -->
+      <a-box position="-0.3 0.45 -3.6" width="3.5" height="0.9" depth="0.8" color="#8B5A2B"></a-box>
+      <a-box position="-0.3 0.95 -3.6" width="3.6" height="0.1" depth="0.9" color="#E0D8CC"></a-box>
+
+      <!-- BALLON D'OR AWARDS -->
+      <a-entity position="-0.1 1 -3.6">
+        <a-cylinder radius="0.08" height="0.08" color="#1A1A1A"></a-cylinder> 
+        <a-sphere position="0 0.15 0" radius="0.1" color="#D4AF37" metalness="0.8"></a-sphere> 
+      </a-entity>
+      <a-entity position="0.3 1 -3.6">
+        <a-cylinder radius="0.08" height="0.08" color="#1A1A1A"></a-cylinder> 
+        <a-sphere position="0 0.15 0" radius="0.1" color="#D4AF37" metalness="0.8"></a-sphere> 
+      </a-entity>
+      
+      <!-- CEILING BEAMS -->
+      <a-box position="0 4.7 0" width="0.3" height="0.4" depth="10" color="#8B5A2B"></a-box>
+      <a-box position="-2 4.7 0" width="0.3" height="0.4" depth="10" color="#8B5A2B"></a-box>
+      <a-box position="2 4.7 0" width="0.3" height="0.4" depth="10" color="#8B5A2B"></a-box>
+
+      <!-- ROUND DINING TABLE -->
+      <a-entity id="table" position="0 0 -1">
+        <a-cylinder position="0 0.75 0" radius="0.8" height="0.08" color="#A67C52"></a-cylinder>
+        <a-cylinder position="0 0.35 0" radius="0.12" height="0.75" color="#8B5A2B"></a-cylinder>
+        <a-sphere position="0 0.25 0" radius="0.18" color="#8B5A2B"></a-sphere>
+      </a-entity>
+
+      <!-- CHAIRS WITH VISIBLE LEGS -->
+      <a-entity position="-1.4 0 -1" rotation="0 90 0">
+        <a-box position="-0.2 0.225 -0.2" width="0.05" height="0.45" depth="0.05" color="#1A1A1A"></a-box>
+        <a-box position="0.2 0.225 -0.2" width="0.05" height="0.45" depth="0.05" color="#1A1A1A"></a-box>
+        <a-box position="-0.2 0.225 0.2" width="0.05" height="0.45" depth="0.05" color="#1A1A1A"></a-box>
+        <a-box position="0.2 0.225 0.2" width="0.05" height="0.45" depth="0.05" color="#1A1A1A"></a-box>
+        <a-box position="0 0.45 0" width="0.5" height="0.1" depth="0.5" color="#F5F5F5"></a-box> 
+        <a-box position="-0.23 0.95 -0.22" width="0.04" height="1.1" depth="0.04" color="#1A1A1A"></a-box> 
+        <a-box position="0.23 0.95 -0.22" width="0.04" height="1.1" depth="0.04" color="#1A1A1A"></a-box>
+        <a-box position="0 1.5 -0.22" width="0.5" height="0.04" depth="0.04" color="#1A1A1A"></a-box>
+      </a-entity>
+
+      <a-entity position="1.4 0 -1" rotation="0 -90 0">
+        <a-box position="-0.2 0.225 -0.2" width="0.05" height="0.45" depth="0.05" color="#1A1A1A"></a-box>
+        <a-box position="0.2 0.225 -0.2" width="0.05" height="0.45" depth="0.05" color="#1A1A1A"></a-box>
+        <a-box position="-0.2 0.225 0.2" width="0.05" height="0.45" depth="0.05" color="#1A1A1A"></a-box>
+        <a-box position="0.2 0.225 0.2" width="0.05" height="0.45" depth="0.05" color="#1A1A1A"></a-box>
+        <a-box position="0 0.45 0" width="0.5" height="0.1" depth="0.5" color="#F5F5F5"></a-box>
+        <a-box position="-0.23 0.95 -0.22" width="0.04" height="1.1" depth="0.04" color="#1A1A1A"></a-box>
+        <a-box position="0.23 0.95 -0.22" width="0.04" height="1.1" depth="0.04" color="#1A1A1A"></a-box>
+        <a-box position="0 1.5 -0.22" width="0.5" height="0.04" depth="0.04" color="#1A1A1A"></a-box>
+      </a-entity>
+
+      <!-- ASSIGNMENT ITEMS (REQUIRED) -->
+      <a-cylinder position="-0.2 0.95 -1" radius="0.1" height="0.25" color="#006400"></a-cylinder> <!-- Milo -->
+      <a-cylinder position="0.1 0.88 -1.2" radius="0.08" height="0.18" color="#E0E0E0"></a-cylinder> <!-- Milk -->
+      <a-entity position="0.3 0.85 -0.8"> <!-- Blue Cup -->
+        <a-cylinder radius="0.05" height="0.1" color="#1976D2"></a-cylinder>
+        <a-torus position="0.05 0 0" radius="0.03" radius-tubular="0.005" arc="180" rotation="0 0 -90" color="#1976D2"></a-torus>
+      </a-entity>
+      <a-entity position="-0.3 0.85 -0.7"> <!-- Red Cup -->
+        <a-cylinder radius="0.05" height="0.1" color="#D32F2F"></a-cylinder>
+        <a-torus position="0.05 0 0" radius="0.03" radius-tubular="0.005" arc="180" rotation="0 0 -90" color="#D32F2F"></a-torus>
+      </a-entity>
+
+      <!-- Camera -->
+      <a-entity position="0 1.6 4">
+        <a-camera></a-camera>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
